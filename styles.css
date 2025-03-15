@@ -36,6 +36,7 @@ nav {
     position: relative;
     background: rgba(255, 255, 255, 0.05);
     padding: 10px;
+    z-index: 1100; /* Asegura que el menú esté por encima de otros elementos */
 }
 
 .hamburger {
@@ -46,7 +47,7 @@ nav {
     position: absolute;
     top: 15px;
     right: 20px;
-    z-index: 1100;
+    z-index: 1200;
 }
 
 .hamburger span {
@@ -94,6 +95,7 @@ nav {
     margin: 20px auto;
     position: relative;
     overflow: hidden;
+    padding: 0 40px; /* Espacio para las flechas */
 }
 
 .swiper-wrapper {
@@ -119,10 +121,11 @@ nav {
     transform: scale(1.05);
 }
 
-.swiper-button-next, .swiper-button-prev {
+.lapiz-next, .lapiz-prev, .acrilico-next, .acrilico-prev {
     color: #f4c542;
     width: 30px;
     height: 30px;
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
@@ -131,19 +134,19 @@ nav {
     background-repeat: no-repeat;
 }
 
-.swiper-button-next {
-    right: 10px;
+.lapiz-next, .acrilico-next {
+    right: 5px;
 }
 
-.swiper-button-prev {
-    left: 10px;
+.lapiz-prev, .acrilico-prev {
+    left: 5px;
 }
 
-.swiper-button-next:after, .swiper-button-prev:after {
+.lapiz-next:after, .lapiz-prev:after, .acrilico-next:after, .acrilico-prev:after {
     font-size: 20px;
 }
 
-.swiper-pagination {
+.lapiz-pagination, .acrilico-pagination {
     position: relative;
     bottom: 0;
     margin-top: 10px;
@@ -348,6 +351,7 @@ footer a:hover {
 
     .swiper-container {
         max-width: 100%;
+        padding: 0 30px;
     }
 
     .art-item img {

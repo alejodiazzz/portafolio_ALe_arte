@@ -13,11 +13,11 @@ document.addEventListener("DOMContentLoaded", () => {
         slidesPerView: 1,
         spaceBetween: 10,
         navigation: {
-            nextEl: ".lapiz-swiper .swiper-button-next",
-            prevEl: ".lapiz-swiper .swiper-button-prev",
+            nextEl: ".lapiz-next",
+            prevEl: ".lapiz-prev",
         },
         pagination: {
-            el: ".lapiz-swiper .swiper-pagination",
+            el: ".lapiz-pagination",
             clickable: true,
         },
         loop: true,
@@ -27,11 +27,11 @@ document.addEventListener("DOMContentLoaded", () => {
         slidesPerView: 1,
         spaceBetween: 10,
         navigation: {
-            nextEl: ".acrilico-swiper .swiper-button-next",
-            prevEl: ".acrilico-swiper .swiper-button-prev",
+            nextEl: ".acrilico-next",
+            prevEl: ".acrilico-prev",
         },
         pagination: {
-            el: ".acrilico-swiper .swiper-pagination",
+            el: ".acrilico-pagination",
             clickable: true,
         },
         loop: true,
