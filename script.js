@@ -1,6 +1,33 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Menú hamburguesa
+    const hamburger = document.querySelector(".hamburger");
+    const navList = document.querySelector(".nav-list");
+
+    hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navList.classList.toggle("active");
+    });
+
+    // Inicialización de Swiper para los carruseles
+    const swipers = document.querySelectorAll(".swiper-container");
+    swipers.forEach(swiper => {
+        new Swiper(swiper, {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            loop: true,
+        });
+    });
+
     // Funcionalidad para abrir imágenes en un modal
-    const galleryImages = document.querySelectorAll(".gallery img");
+    const galleryImages = document.querySelectorAll(".gallery img, .swiper-slide img");
     const modal = document.createElement("div");
     modal.classList.add("modal");
     document.body.appendChild(modal);
@@ -12,12 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Cerrar modal al hacer clic
     modal.addEventListener("click", () => {
         modal.classList.remove("active");
     });
 
-    // Cerrar modal con tecla "Escape"
     document.addEventListener("keydown", (e) => {
         if (e.key === "Escape") {
             modal.classList.remove("active");

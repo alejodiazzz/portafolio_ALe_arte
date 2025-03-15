@@ -3,7 +3,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #0b3d91; /* Azul oscuro */
+    background-color: #0b3d91;
     color: #fff;
     line-height: 1.6;
 }
@@ -22,14 +22,40 @@ header {
 header h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
+    font-weight: 600;
 }
 
 header p {
     font-size: 1.2rem;
     margin-bottom: 20px;
+    font-weight: 300;
 }
 
 /* Menú de navegación */
+nav {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 1100;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
 .nav-list {
     list-style: none;
     padding: 0;
@@ -37,6 +63,7 @@ header p {
     justify-content: center;
     gap: 20px;
     margin: 20px 0;
+    transition: all 0.3s ease;
 }
 
 .nav-list li a {
@@ -54,21 +81,20 @@ header p {
 .category {
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
-    margin: 20px;
+    margin: 20px auto;
     border-radius: 10px;
     text-align: center;
+    max-width: 900px;
 }
 
-/* Galería */
-.gallery {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    padding: 20px;
+/* Carrusel */
+.swiper-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
 }
 
-.art-item {
+.swiper-slide {
     text-align: center;
 }
 
@@ -77,10 +103,19 @@ header p {
     border-radius: 8px;
     cursor: pointer;
     transition: transform 0.3s ease;
+    object-fit: cover;
 }
 
 .art-item img:hover {
     transform: scale(1.05);
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: #f4c542;
+}
+
+.swiper-pagination-bullet-active {
+    background: #f4c542;
 }
 
 /* Botón de encargo */
@@ -93,6 +128,7 @@ header p {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
+    font-weight: 600;
 }
 
 .cta-button:hover {
@@ -124,6 +160,26 @@ header p {
     border-radius: 10px;
 }
 
+/* Sección de Proceso (Videos) */
+.video-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.video-item {
+    text-align: center;
+    max-width: 400px;
+}
+
+.video-item video {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 /* Formulario */
 form {
     max-width: 500px;
@@ -142,6 +198,7 @@ input, textarea {
     border: none;
     border-radius: 5px;
     font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
 }
 
 button[type="submit"] {
@@ -152,6 +209,7 @@ button[type="submit"] {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-weight: 600;
 }
 
 button[type="submit"]:hover {
@@ -220,19 +278,46 @@ footer a:hover {
 
 /* Diseño responsivo */
 @media (max-width: 768px) {
-    .gallery {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none;
         flex-direction: column;
         align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #0b3d91;
+        padding: 20px 0;
+        z-index: 1000;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    .swiper-container {
+        max-width: 100%;
     }
 
     .art-item img {
         width: 100%;
         max-width: 300px;
-    }
-
-    .nav-list {
-        flex-direction: column;
-        align-items: center;
     }
 
     .cta-button {
@@ -257,5 +342,9 @@ footer a:hover {
     .floating-btn {
         width: 40px;
         height: 40px;
+    }
+
+    .video-item {
+        max-width: 100%;
     }
 }

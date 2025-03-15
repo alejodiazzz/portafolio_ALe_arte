@@ -7,6 +7,7 @@
     <meta name="keywords" content="retratos personalizados, arte a lápiz, cuadros en acrílico, encargos de arte">
     <title>Portafolio de Arte | Retratos Personalizados</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,6 +20,11 @@
 
     <!-- Menú de navegación -->
     <nav>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <ul class="nav-list">
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#portafolio">Portafolio</a></li>
@@ -34,36 +40,46 @@
     <section id="portafolio">
         <h2>Mi Trabajo</h2>
 
-        <!-- Retratos a Lápiz -->
+        <!-- Retratos a Lápiz (Carrusel) -->
         <div class="category">
             <h3>Retratos a Lápiz</h3>
             <p>Realizados con grafito sobre papel de alta calidad.</p>
-            <div class="gallery">
-                <div class="art-item">
-                    <img src="img/lapiz50x35.jpeg" alt="Retrato a lápiz realista de 35x25 cm" loading="lazy">
-                    <p>35x25 cm - Papel especial</p>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide art-item">
+                        <img src="img/lapiz50x35.jpeg" alt="Retrato a lápiz realista de 35x25 cm" loading="lazy">
+                        <p>35x25 cm - Papel especial</p>
+                    </div>
+                    <div class="swiper-slide art-item">
+                        <img src="img/lapiz2.jpeg" alt="Retrato a lápiz detallado de 50x35 cm" loading="lazy">
+                        <p>50x35 cm - Detalles más precisos</p>
+                    </div>
                 </div>
-                <div class="art-item">
-                    <img src="img/lapiz2.jpeg" alt="Retrato a lápiz detallado de 50x35 cm" loading="lazy">
-                    <p>50x35 cm - Detalles más precisos</p>
-                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
             </div>
             <button class="cta-button">Encargar este estilo</button>
         </div>
 
-        <!-- Cuadros en Acrílico -->
+        <!-- Cuadros en Acrílico (Carrusel) -->
         <div class="category">
             <h3>Cuadros en Acrílico</h3>
             <p>Colores vibrantes sobre lienzo, tamaño personalizable.</p>
-            <div class="gallery">
-                <div class="art-item">
-                    <img src="img/Acrilico1.png" alt="Cuadro en acrílico colorido de tamaño personalizado" loading="lazy">
-                    <p>Tamaño personalizable</p>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide art-item">
+                        <img src="img/Acrilico1.png" alt="Cuadro en acrílico colorido de tamaño personalizado" loading="lazy">
+                        <p>Tamaño personalizable</p>
+                    </div>
+                    <div class="swiper-slide art-item">
+                        <img src="img/acrilico2.jpeg" alt="Cuadro en acrílico con fondo personalizado" loading="lazy">
+                        <p>Opción de fondos personalizados</p>
+                    </div>
                 </div>
-                <div class="art-item">
-                    <img src="img/acrilico2.jpeg" alt="Cuadro en acrílico con fondo personalizado" loading="lazy">
-                    <p>Opción de fondos personalizados</p>
-                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
             </div>
             <button class="cta-button">Encargar este estilo</button>
         </div>
@@ -76,30 +92,48 @@
         <p><strong>Cuadros en acrílico:</strong> Tamaño personalizable</p>
     </section>
 
+    <!-- Sección de Proceso (Videos) -->
+    <section id="proceso">
+        <h2>Proceso</h2>
+        <div class="video-gallery">
+            <div class="video-item">
+                <video controls>
+                    <source src="videos/proceso_lapiz.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+                <p>Proceso de un retrato a lápiz</p>
+            </div>
+            <div class="video-item">
+                <video controls>
+                    <source src="videos/proceso_acrilico.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+                <p>Proceso de un cuadro en acrílico</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Sección de Contacto -->
     <section id="contacto">
         <h2>Contacto</h2>
         <form action="https://formspree.io/f/tu-id-real" method="POST" id="contact-form">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
-            
             <label for="email">Correo:</label>
             <input type="email" id="email" name="email" required>
-
             <label for="mensaje">Mensaje:</label>
             <textarea id="mensaje" name="mensaje" required></textarea>
-
             <button type="submit">Enviar Mensaje</button>
         </form>
     </section>
 
-служ    <!-- Pie de página -->
+    <!-- Pie de página -->
     <footer>
         <p>© 2025 Retratos Personalizados. Todos los derechos reservados.</p>
         <p>Contacto: <a href="mailto:tu-email@example.com">tu-email@example.com</a></p>
     </footer>
 
-    <!-- Botones flotantes con imágenes personalizadas -->
+    <!-- Botones flotantes -->
     <div class="floating-buttons">
         <a href="https://wa.me/573219038353" target="_blank" class="floating-btn whatsapp" title="Chatea por WhatsApp">
             <img src="img/whatsapp.png" alt="Ícono de WhatsApp">
@@ -112,6 +146,7 @@
         </a>
     </div>
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
