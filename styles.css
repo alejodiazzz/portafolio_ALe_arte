@@ -36,7 +36,7 @@ nav {
     position: relative;
     background: rgba(255, 255, 255, 0.05);
     padding: 10px;
-    z-index: 1100; /* Asegura que el menú esté por encima de otros elementos */
+    z-index: 1100;
 }
 
 .hamburger {
@@ -95,7 +95,7 @@ nav {
     margin: 20px auto;
     position: relative;
     overflow: hidden;
-    padding: 0 40px; /* Espacio para las flechas */
+    padding: 0 40px;
 }
 
 .swiper-wrapper {
@@ -109,7 +109,18 @@ nav {
     align-items: center;
 }
 
-.art-item img {
+.art-item {
+    width: 100%;
+}
+
+.art-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.art-content img {
     width: 250px;
     border-radius: 8px;
     cursor: pointer;
@@ -117,8 +128,14 @@ nav {
     object-fit: cover;
 }
 
-.art-item img:hover {
+.art-content img:hover {
     transform: scale(1.05);
+}
+
+.art-content p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 300;
 }
 
 .lapiz-next, .lapiz-prev, .acrilico-next, .acrilico-prev {
@@ -354,7 +371,7 @@ footer a:hover {
         padding: 0 30px;
     }
 
-    .art-item img {
+    .art-content img {
         width: 100%;
         max-width: 300px;
     }
