@@ -8,26 +8,37 @@ document.addEventListener("DOMContentLoaded", () => {
         navList.classList.toggle("active");
     });
 
-    // Inicialización de Swiper para los carruseles
-    const swipers = document.querySelectorAll(".swiper-container");
-    swipers.forEach(swiper => {
-        new Swiper(swiper, {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            loop: true,
-        });
+    // Inicialización de Swiper para cada carrusel
+    const lapizSwiper = new Swiper(".lapiz-swiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".lapiz-swiper .swiper-button-next",
+            prevEl: ".lapiz-swiper .swiper-button-prev",
+        },
+        pagination: {
+            el: ".lapiz-swiper .swiper-pagination",
+            clickable: true,
+        },
+        loop: true,
+    });
+
+    const acrilicoSwiper = new Swiper(".acrilico-swiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".acrilico-swiper .swiper-button-next",
+            prevEl: ".acrilico-swiper .swiper-button-prev",
+        },
+        pagination: {
+            el: ".acrilico-swiper .swiper-pagination",
+            clickable: true,
+        },
+        loop: true,
     });
 
     // Funcionalidad para abrir imágenes en un modal
-    const galleryImages = document.querySelectorAll(".gallery img, .swiper-slide img");
+    const galleryImages = document.querySelectorAll(".swiper-slide img");
     const modal = document.createElement("div");
     modal.classList.add("modal");
     document.body.appendChild(modal);
