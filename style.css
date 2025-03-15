@@ -1,0 +1,107 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0b3d91; /* Azul oscuro como base */
+    color: #fff;
+}
+
+/* Encabezado */
+header {
+    background: linear-gradient(90deg, #0b3d91, #1c56b9, #f4c542); 
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+/* Navegación */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #f4c542;
+}
+
+/* Galería */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Modal de imagen */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.modal.active {
+    display: flex;
+}
+
+/* Botón de acción */
+.cta-button {
+    background-color: #f4c542;
+    color: #0b3d91;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ffd700;
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Retratos personalizados a lápiz y acrílico, transforma tus recuerdos en arte único.">
+    <meta name="keywords" content="retratos personalizados, arte a lápiz, cuadros en acrílico, encargos de arte">
+    <title>Portafolio de Arte | Retratos Personalizados</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <h1>Retratos Personalizados</h1>
+        <p>Transformo tus recuerdos en arte único</p>
+        <button class="cta-button">Encarga tu retrato</button>
+    </header>
+
+    <!-- Menú de navegación -->
+    <nav>
+        <ul class="nav-list">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#portafolio">Portafolio</a></li>
+            <li><a href="#tamaños">Tamaños</a></li>
+            <li><a href="#proceso">Proceso</a></li>
+            <li><a href="#precios">Precios</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección de Portafolio -->
+    <section id="portafolio">
+        <h2>Mi Trabajo</h2>
+
+        <!-- Retratos a Lápiz -->
+        <div class="category">
+            <h3>Retratos a Lápiz</h3>
+            <p>Realizados con grafito sobre papel de alta calidad.</p>
+            <div class="gallery">
+                <div class="art-item">
+                    <img src="img/lapiz1.jpg" alt="Retrato a lápiz realista de 35x25 cm" loading="lazy">
+                    <p>35x25 cm - Papel especial</p>
+                </div>
+                <div class="art-item">
+                    <img src="img/lapiz2.jpg" alt="Retrato a lápiz detallado de 50x35 cm" loading="lazy">
+                    <p>50x35 cm - Detalles más precisos</p>
+                </div>
+            </div>
+            <button class="cta-button">Encargar este estilo</button>
+        </div>
+
+        <!-- Cuadros en Acrílico -->
+        <div class="category">
+            <h3>Cuadros en Acrílico</h3>
+            <p>Colores vibrantes sobre lienzo, tamaño personalizable.</p>
+            <div class="gallery">
+                <div class="art-item">
+                    <img src="img/acrilico1.jpg" alt="Cuadro en acrílico colorido de tamaño personalizado" loading="lazy">
+                    <p>Tamaño personalizable</p>
+                </div>
+                <div class="art-item">
+                    <img src="img/acrilico2.jpg" alt="Cuadro en acrílico con fondo personalizado" loading="lazy">
+                    <p>Opción de fondos personalizados</p>
+                </div>
+            </div>
+            <button class="cta-button">Encargar este estilo</button>
+        </div>
+    </section>
+
+    <!-- Sección de Tamaños -->
+    <section id="tamaños">
+        <h2>Tamaños Disponibles</h2>
+        <p><strong>Retratos a lápiz:</strong> 35x25 cm | 50x35 cm</p>
+        <p><strong>Cuadros en acrílico:</strong> Tamaño personalizable</p>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form action="https://formspree.io/f/tu-id-real" method="POST" id="contact-form">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="email">Correo:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+    </section>
+
+служ    <!-- Pie de página -->
+    <footer>
+        <p>© 2025 Retratos Personalizados. Todos los derechos reservados.</p>
+        <p>Contacto: <a href="mailto:tu-email@example.com">tu-email@example.com</a></p>
+    </footer>
+
+    <!-- Botones flotantes con imágenes personalizadas -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/573219038353" target="_blank" class="floating-btn whatsapp" title="Chatea por WhatsApp">
+            <img src="img/whatsapp.png" alt="Ícono de WhatsApp">
+        </a>
+        <a href="https://instagram.com/ale._.arte" target="_blank" class="floating-btn instagram" title="Visita mi Instagram">
+            <img src="img/instagram.png" alt="Ícono de Instagram">
+        </a>
+        <a href="https://tiktok.com/@alejandrodiazzm" target="_blank" class="floating-btn tiktok" title="Mira mi TikTok">
+            <img src="img/tiktok.png" alt="Ícono de TikTok">
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
