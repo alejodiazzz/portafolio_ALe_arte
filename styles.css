@@ -297,6 +297,8 @@ footer a:hover {
     flex-direction: column;
     gap: 15px;
     z-index: 1000;
+    padding: 0 5px; /* Margen interno para evitar que se corte */
+    box-sizing: border-box;
 }
 
 .floating-btn {
@@ -391,16 +393,31 @@ footer a:hover {
 
     .floating-buttons {
         bottom: 10px;
-        right: 10px;
+        right: 10px; /* Reducido para que quepa completo */
         gap: 10px;
+        padding: 0 5px; /* Margen interno para evitar recorte */
     }
 
     .floating-btn {
-        width: 40px;
+        width: 40px; /* Tamaño reducido para móviles */
         height: 40px;
     }
 
     .video-item {
         max-width: 100%;
+    }
+}
+
+/* Ajuste adicional para tablets (entre 768px y 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .floating-buttons {
+        right: 15px; /* Ajuste intermedio para tablets */
+        bottom: 15px;
+        gap: 12px;
+    }
+
+    .floating-btn {
+        width: 45px; /* Tamaño intermedio para tablets */
+        height: 45px;
     }
 }
