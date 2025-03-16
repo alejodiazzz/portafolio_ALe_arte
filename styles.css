@@ -7,7 +7,7 @@ body {
     color: #fff;
     line-height: 1.6;
     overflow-x: hidden;
-    background-image: url('https://www.transparenttextures.com/patterns/van-gogh.png'); /* Textura Van Gogh */
+    background-image: url('https://media-public.canva.com/6CwqI/MAFZ1-6CwqI/1/tl.png'); /* Textura Van Gogh */
     background-repeat: repeat; /* Patrón repetitivo */
     background-size: 200px 200px; /* Tamaño del patrón */
     background-blend-mode: overlay; /* Mezcla con el color de fondo */
@@ -40,7 +40,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(11, 61, 145, 0.6) url('https://www.transparenttextures.com/patterns/swirls.png') repeat; /* Pinceladas Van Gogh */
+    background: rgba(11, 61, 145, 0.6) url('https://media-public.canva.com/6CwqI/MAFZ1-6CwqI/1/tl.png') repeat; /* Pinceladas Van Gogh */
     background-size: 150px 150px;
     z-index: 1;
     opacity: 0.7; /* Sutileza */
@@ -69,7 +69,7 @@ section {
     transform: translateX(-50%);
     width: 50px;
     height: 3px;
-    background: url('https://www.transparenttextures.com/patterns/van-gogh.png') repeat;
+    background: url('https://media-public.canva.com/6CwqI/MAFZ1-6CwqI/1/tl.png') repeat;
     background-size: 50px 50px; /* Detalle de pincelada */
 }
 
@@ -159,7 +159,7 @@ nav {
     right: -4px;
     bottom: -4px;
     border-radius: 12px;
-    background: url('https://www.transparenttextures.com/patterns/van-gogh.png') repeat;
+    background: url('https://media-public.canva.com/6CwqI/MAFZ1-6CwqI/1/tl.png') repeat;
     background-size: 100px 100px;
     z-index: -1;
     opacity: 0.5;
