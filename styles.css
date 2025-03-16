@@ -6,7 +6,7 @@ body {
     background-color: #0b3d91;
     color: #fff;
     line-height: 1.6;
-    overflow-x: hidden; /* Evita desbordamiento horizontal en todo el cuerpo */
+    overflow-x: hidden;
 }
 
 section {
@@ -39,6 +39,8 @@ section {
 .header-content {
     position: relative;
     z-index: 2;
+    opacity: 0; /* Inicialmente invisible para la animación */
+    animation: fadeIn 1s ease-in forwards; /* Animación de entrada */
 }
 
 .header-content h1 {
@@ -137,7 +139,7 @@ nav {
     margin: 20px auto;
     position: relative;
     overflow: hidden;
-    box-sizing: border-box; /* Incluye padding en el ancho total */
+    box-sizing: border-box;
 }
 
 .swiper-wrapper {
@@ -151,7 +153,9 @@ nav {
     justify-content: center;
     align-items: center;
     width: 100%;
-    flex-shrink: 0; /* Evita que las diapositivas se encojan */
+    flex-shrink: 0;
+    opacity: 0; /* Inicialmente invisible para la animación */
+    animation: slideIn 0.5s ease-out forwards; /* Animación al aparecer */
 }
 
 .art-item {
@@ -164,12 +168,12 @@ nav {
     align-items: center;
     gap: 10px;
     width: 100%;
-    max-width: 300px; /* Limita el ancho del contenido */
+    max-width: 300px;
 }
 
 .art-content img {
     width: 100%;
-    max-width: 250px; /* Tamaño máximo fijo para la imagen */
+    max-width: 250px;
     border-radius: 8px;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -332,8 +336,9 @@ footer {
 }
 
 .floating-btn:hover {
-    transform: scale(1.1);
+    transform: scale(1.1) rotate(10deg); /* Añadimos un leve giro al hover */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    animation: bounce 0.4s ease; /* Efecto de rebote */
 }
 
 .floating-btn img {
@@ -352,6 +357,38 @@ footer {
 
 .tiktok {
     background-color: #000000;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Sube desde abajo */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(20px); /* Entra desde la derecha */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: scale(1.1) rotate(10deg);
+    }
+    50% {
+        transform: scale(1.15) rotate(10deg); /* Pequeño rebote */
+    }
 }
 
 /* Diseño responsivo */
@@ -391,18 +428,18 @@ footer {
 
     .swiper-container {
         max-width: 100%;
-        padding: 0; /* Quitamos padding lateral en móviles */
-        overflow: hidden; /* Aseguramos que no haya desbordamiento */
+        padding: 0;
+        overflow: hidden;
     }
 
     .swiper-slide {
         width: 100%;
-        padding: 0 10px; /* Padding interno para centrar el contenido */
+        padding: 0 10px;
         box-sizing: border-box;
     }
 
     .art-content {
-        max-width: 100%; /* Aseguramos que no exceda el contenedor */
+        max-width: 100%;
     }
 
     .art-content img {
@@ -411,7 +448,7 @@ footer {
     }
 
     .lapiz-next, .acrilico-next {
-        right: 0; /* Ajustamos las flechas al borde */
+        right: 0;
     }
 
     .lapiz-prev, .acrilico-prev {
@@ -447,7 +484,7 @@ footer {
 @media (max-width: 1024px) and (min-width: 769px) {
     .swiper-container {
         max-width: 100%;
-        padding: 0 20px; /* Padding reducido para tablets */
+        padding: 0 20px;
     }
 
     .floating-buttons {
