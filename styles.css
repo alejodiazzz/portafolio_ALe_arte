@@ -16,7 +16,7 @@ section {
 /* Encabezado */
 .header-background {
     position: relative;
-    background: url('img/fondo-cabecera.jpg') no-repeat center center/cover;
+    background: url('img/fondo.jpeg') no-repeat center center/cover;
     padding: 60px 20px;
     text-align: center;
     min-height: 300px;
