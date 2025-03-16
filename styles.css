@@ -70,7 +70,7 @@ section {
     width: 50px;
     height: 3px;
     background: url('https://media-public.canva.com/6CwqI/MAFZ1-6CwqI/1/tl.png') repeat;
-    background-size: 50px 50px; /* Detalle de pincelada */
+    background-size: 200px 200px; /* Detalle de pincelada */
 }
 
 /* Botón de encargo */
