@@ -7,17 +7,16 @@ body {
     color: #fff;
     line-height: 1.6;
     overflow-x: hidden;
-    background-image: url('https://media-public.canva.com/6CwqI/MAFZ1-6CwqI/1/tl.png'); /* Textura Van Gogh */
-    background-repeat: repeat; /* Patrón repetitivo */
-    background-size: 200px 200px; /* Tamaño del patrón */
-    background-blend-mode: overlay; /* Mezcla con el color de fondo */
-    opacity: 0.9; /* Baja opacidad para sutileza */
+    background-image: url('https://media-public.canva.com/6CwqI/MAFZ1-6CwqI/1/tl.png');
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    background-blend-mode: overlay;
 }
 
 /* Secciones */
 section {
     padding: 40px 20px;
-    position: relative; /* Para los detalles decorativos */
+    position: relative;
 }
 
 /* Encabezado */
@@ -30,7 +29,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-blend-mode: overlay; /* Combina con el overlay */
+    background-blend-mode: overlay;
 }
 
 .header-background::before {
@@ -40,10 +39,10 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(11, 61, 145, 0.6) url('https://media-public.canva.com/6CwqI/MAFZ1-6CwqI/1/tl.png') repeat; /* Pinceladas Van Gogh */
+    background: rgba(11, 61, 145, 0.6) url('https://media-public.canva.com/6CwqI/MAFZ1-6CwqI/1/tl.png') repeat;
     background-size: 150px 150px;
     z-index: 1;
-    opacity: 0.7; /* Sutileza */
+    opacity: 0.7;
 }
 
 .header-content {
@@ -70,7 +69,7 @@ section {
     width: 50px;
     height: 3px;
     background: url('https://media-public.canva.com/j28tw/MAFogIj28tw/1/tl.png') repeat;
-    background-size: 200px 200px; /* Detalle de pincelada */
+    background-size: 200px 200px;
 }
 
 /* Botón de encargo */
@@ -93,7 +92,8 @@ section {
 
 /* Menú de navegación */
 nav {
-    position: relative;
+    position: sticky;
+    top: 0;
     background: rgba(255, 255, 255, 0.05);
     padding: 10px;
     z-index: 1100;
@@ -147,8 +147,8 @@ nav {
     text-align: center;
     max-width: 900px;
     position: relative;
-    border: 2px solid transparent; /* Borde inicial */
-    background-clip: padding-box; /* Evita que el borde cubra el fondo */
+    border: 2px solid transparent;
+    background-clip: padding-box;
 }
 
 .category::before {
@@ -269,7 +269,7 @@ nav {
     background: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 1200; /* Más alto que el menú */
 }
 
 .modal.active {
@@ -394,42 +394,23 @@ footer {
 
 /* Animaciones */
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes slideIn {
-    0% {
-        opacity: 0;
-        transform: translateX(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+    0% { opacity: 0; transform: translateX(20px); }
+    100% { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes bounce {
-    0%, 100% {
-        transform: scale(1.1) rotate(10deg);
-    }
-    50% {
-        transform: scale(1.15) rotate(10deg);
-    }
+    0%, 100% { transform: scale(1.1) rotate(10deg); }
+    50% { transform: scale(1.15) rotate(10deg); }
 }
 
 /* Diseño responsivo */
 @media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-
+    .hamburger { display: flex; }
     .nav-list {
         display: none;
         flex-direction: column;
@@ -442,100 +423,27 @@ footer {
         padding: 20px 0;
         z-index: 1000;
     }
-
-    .nav-list.active {
-        display: flex;
-    }
-
-    .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -7px);
-    }
-
-    .swiper-container {
-        max-width: 100%;
-        padding: 0;
-        overflow: hidden;
-    }
-
-    .swiper-slide {
-        width: 100%;
-        padding: 0 10px;
-        box-sizing: border-box;
-    }
-
-    .art-content {
-        max-width: 100%;
-    }
-
-    .art-content img {
-        width: 100%;
-        max-width: 300px;
-    }
-
-    .lapiz-next, .acrilico-next {
-        right: 0;
-    }
-
-    .lapiz-prev, .acrilico-prev {
-        left: 0;
-    }
-
-    .header-content h1 {
-        font-size: 2rem;
-    }
-
-    .header-content p {
-        font-size: 1rem;
-    }
-
-    .floating-buttons {
-        bottom: 10px;
-        right: 10px;
-        gap: 10px;
-        padding: 0 5px;
-    }
-
-    .floating-btn {
-        width: 40px;
-        height: 40px;
-    }
-
-    .video-item {
-        max-width: 100%;
-    }
+    .nav-list.active { display: flex; }
+    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+    .swiper-container { max-width: 100%; padding: 0; overflow: hidden; }
+    .swiper-slide { width: 100%; padding: 0 10px; box-sizing: border-box; }
+    .art-content { max-width: 100%; }
+    .art-content img { width: 100%; max-width: 300px; }
+    .lapiz-next, .acrilico-next { right: 0; }
+    .lapiz-prev, .acrilico-prev { left: 0; }
+    .header-content h1 { font-size: 2rem; }
+    .header-content p { font-size: 1rem; }
+    .floating-buttons { bottom: 10px; right: 10px; gap: 10px; padding: 0 5px; }
+    .floating-btn { width: 40px; height: 40px; }
+    .video-item { max-width: 100%; }
 }
 
-/* Ajuste para tablets */
 @media (max-width: 1024px) and (min-width: 769px) {
-    .swiper-container {
-        max-width: 100%;
-        padding: 0 20px;
-    }
-
-    .floating-buttons {
-        right: 15px;
-        bottom: 15px;
-        gap: 12px;
-    }
-
-    .floating-btn {
-        width: 45px;
-        height: 45px;
-    }
-
-    .header-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .header-content p {
-        font-size: 1.2rem;
-    }
+    .swiper-container { max-width: 100%; padding: 0 20px; }
+    .floating-buttons { right: 15px; bottom: 15px; gap: 12px; }
+    .floating-btn { width: 45px; height: 45px; }
+    .header-content h1 { font-size: 2.5rem; }
+    .header-content p { font-size: 1.2rem; }
 }
