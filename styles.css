@@ -53,23 +53,56 @@ section {
 }
 
 .header-content h1 {
-    font-size: 3rem;
+    font-family: 'Amatic SC', cursive;
+    font-size: 5rem;
     margin-bottom: 15px;
-    font-weight: 600;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7), 0 0 10px rgba(244, 197, 66, 0.5);
+    letter-spacing: 3px;
+    text-transform: uppercase;
     position: relative;
+    display: flex; /* Cambiado a flex para alinear los elementos */
+    align-items: center;
+    justify-content: center;
 }
 
-.header-content h1::after {
+/* Rayones detrás del texto */
+.header-content h1::before {
     content: '';
     position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 3px;
-    background: url('https://media-public.canva.com/j28tw/MAFogIj28tw/1/tl.png') repeat;
-    background-size: 200px 200px;
+    top: -20px;
+    left: -30px;
+    width: calc(100% + 60px);
+    height: calc(100% + 40px);
+    background: url('https://media-public.canva.com/6CwqI/MAFZ1-6CwqI/1/tl.png') no-repeat center center;
+    background-size: contain;
+    opacity: 0.5;
+    z-index: -1;
+    filter: brightness(2) contrast(1.5);
+}
+
+/* Remolinos a la izquierda */
+.swirls-left img {
+    width: 80px; /* Tamaño de los remolinos */
+    height: auto;
+    margin-right: 15px; /* Espacio entre remolinos y texto */
+    filter: brightness(2) contrast(1.5); /* Ajuste para que sean blancos */
+}
+
+/* Luna a la derecha */
+.moon-right img {
+    width: 80px; /* Tamaño de la luna */
+    height: auto;
+    margin-left: 15px; /* Espacio entre texto y luna */
+    filter: brightness(2) contrast(1.5); /* Ajuste para que sea blanca */
+}
+
+.header-content p {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* Botón de encargo */
@@ -223,6 +256,7 @@ nav {
     font-weight: 300;
 }
 
+/* Flechas y paginación del carrusel */
 .lapiz-next, .lapiz-prev, .acrilico-next, .acrilico-prev {
     color: #f4c542;
     width: 30px;
@@ -269,7 +303,7 @@ nav {
     background: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
-    z-index: 1200; /* Más alto que el menú */
+    z-index: 1200;
 }
 
 .modal.active {
@@ -433,7 +467,15 @@ footer {
     .art-content img { width: 100%; max-width: 300px; }
     .lapiz-next, .acrilico-next { right: 0; }
     .lapiz-prev, .acrilico-prev { left: 0; }
-    .header-content h1 { font-size: 2rem; }
+    .header-content h1 { font-size: 3rem; }
+    .header-content h1::before { 
+        top: -15px; 
+        left: -20px; 
+        width: calc(100% + 40px); 
+        height: calc(100% + 30px); 
+    }
+    .swirls-left img { width: 50px; margin-right: 10px; }
+    .moon-right img { width: 50px; margin-left: 10px; }
     .header-content p { font-size: 1rem; }
     .floating-buttons { bottom: 10px; right: 10px; gap: 10px; padding: 0 5px; }
     .floating-btn { width: 40px; height: 40px; }
@@ -444,6 +486,14 @@ footer {
     .swiper-container { max-width: 100%; padding: 0 20px; }
     .floating-buttons { right: 15px; bottom: 15px; gap: 12px; }
     .floating-btn { width: 45px; height: 45px; }
-    .header-content h1 { font-size: 2.5rem; }
+    .header-content h1 { font-size: 4rem; }
+    .header-content h1::before { 
+        top: -18px; 
+        left: -25px; 
+        width: calc(100% + 50px); 
+        height: calc(100% + 35px); 
+    }
+    .swirls-left img { width: 60px; margin-right: 12px; }
+    .moon-right img { width: 60px; margin-left: 12px; }
     .header-content p { font-size: 1.2rem; }
 }
