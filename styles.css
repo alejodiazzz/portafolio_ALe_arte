@@ -53,7 +53,7 @@ section {
 }
 
 .header-content h1 {
-    font-family: 'Amatic SC', cursive;
+    font-family: 'Amatic SC', cursive !important; /* Forzamos la fuente */
     font-size: 5rem;
     margin-bottom: 15px;
     font-weight: 700;
@@ -62,9 +62,10 @@ section {
     letter-spacing: 3px;
     text-transform: uppercase;
     position: relative;
-    display: flex; /* Cambiado a flex para alinear los elementos */
+    display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap; /* Permitimos que se ajuste en móviles */
 }
 
 /* Rayones detrás del texto */
@@ -84,18 +85,18 @@ section {
 
 /* Remolinos a la izquierda */
 .swirls-left img {
-    width: 80px; /* Tamaño de los remolinos */
+    width: 80px;
     height: auto;
-    margin-right: 15px; /* Espacio entre remolinos y texto */
-    filter: brightness(2) contrast(1.5); /* Ajuste para que sean blancos */
+    margin-right: 15px;
+    filter: brightness(2) contrast(1.5);
 }
 
 /* Luna a la derecha */
 .moon-right img {
-    width: 80px; /* Tamaño de la luna */
+    width: 80px;
     height: auto;
-    margin-left: 15px; /* Espacio entre texto y luna */
-    filter: brightness(2) contrast(1.5); /* Ajuste para que sea blanca */
+    margin-left: 15px;
+    filter: brightness(2) contrast(1.5);
 }
 
 .header-content p {
@@ -467,15 +468,28 @@ footer {
     .art-content img { width: 100%; max-width: 300px; }
     .lapiz-next, .acrilico-next { right: 0; }
     .lapiz-prev, .acrilico-prev { left: 0; }
-    .header-content h1 { font-size: 3rem; }
-    .header-content h1::before { 
-        top: -15px; 
-        left: -20px; 
-        width: calc(100% + 40px); 
-        height: calc(100% + 30px); 
+    .header-background { padding: 40px 10px; min-height: 200px; } /* Reducimos padding y altura */
+    .header-content h1 {
+        font-size: 2.5rem; /* Tamaño más pequeño para móviles */
+        flex-direction: column; /* Apilamos elementos en columna */
+        gap: 10px; /* Espacio entre elementos */
     }
-    .swirls-left img { width: 50px; margin-right: 10px; }
-    .moon-right img { width: 50px; margin-left: 10px; }
+    .header-content h1::before {
+        top: -10px;
+        left: -15px;
+        width: calc(100% + 30px);
+        height: calc(100% + 20px);
+    }
+    .swirls-left img {
+        width: 40px; /* Tamaño reducido para móviles */
+        margin-right: 0;
+        margin-bottom: 5px; /* Espacio debajo en columna */
+    }
+    .moon-right img {
+        width: 40px; /* Tamaño reducido para móviles */
+        margin-left: 0;
+        margin-top: 5px; /* Espacio arriba en columna */
+    }
     .header-content p { font-size: 1rem; }
     .floating-buttons { bottom: 10px; right: 10px; gap: 10px; padding: 0 5px; }
     .floating-btn { width: 40px; height: 40px; }
@@ -487,11 +501,11 @@ footer {
     .floating-buttons { right: 15px; bottom: 15px; gap: 12px; }
     .floating-btn { width: 45px; height: 45px; }
     .header-content h1 { font-size: 4rem; }
-    .header-content h1::before { 
-        top: -18px; 
-        left: -25px; 
-        width: calc(100% + 50px); 
-        height: calc(100% + 35px); 
+    .header-content h1::before {
+        top: -18px;
+        left: -25px;
+        width: calc(100% + 50px);
+        height: calc(100% + 35px);
     }
     .swirls-left img { width: 60px; margin-right: 12px; }
     .moon-right img { width: 60px; margin-left: 12px; }
