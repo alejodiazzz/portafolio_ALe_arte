@@ -6,11 +6,15 @@
     <meta name="description" content="Ale arte, Retratos personalizados a lápiz y acrílico, transforma tus recuerdos en arte único.">
     <meta name="keywords" content="ale arte, retratos personalizados, arte a lápiz, cuadros en acrílico, encargos de arte">
     <title>Portafolio de Arte | Retratos Personalizados</title>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles.css">
+    <!-- Pre-cargar las primeras imágenes de cada carrusel -->
+    <link rel="preload" href="img/lapiz50x35.jpeg" as="image">
+    <link rel="preload" href="img/Acrilico1.png" as="image">
 </head>
 <body>
+    <!-- Resto del HTML sin cambios -->
     <!-- Encabezado -->
     <header class="header-background">
         <div class="header-content">
@@ -54,43 +58,57 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide art-item">
                         <div class="art-content">
-                            <img src="img/lapiz50x35.jpeg" alt="Retrato a lápiz realista de 50x35 cm" loading="lazy">
-                            <p>50x35 cm - Papel especial(Durex)</p>
+                            <span class="category-tag" style="background-color: #287233;">LÁPIZ</span>
+                            <img src="img/lapiz50x35.jpeg" alt="Retrato a lápiz realista de 50x35 cm" loading="lazy" width="300" height="400">
+                            <h4>Retrato Realista</h4>
+                            <p>50x35 cm - Papel especial (Durex)</p>
                         </div>
                     </div>
                     <div class="swiper-slide art-item">
                         <div class="art-content">
-                            <img src="img/lapiz2.jpeg" alt="Retrato a lápiz detallado de 35x25 cm" loading="lazy">
-                            <p>35x25 cm - Persona y mascota,Detalles más precisos</p>
+                            <span class="category-tag" style="background-color: #287233;">LÁPIZ</span>
+                            <img src="img/lapiz2.jpeg" alt="Retrato a lápiz detallado de 35x25 cm" loading="lazy" width="300" height="400">
+                            <h4>Persona y Mascota</h4>
+                            <p>35x25 cm - Detalles más precisos</p>
                         </div>
                     </div>
                     <div class="swiper-slide art-item">
                         <div class="art-content">
-                            <img src="img/aa2.png" alt="Retrato a lápiz detallado de 35x25 cm" loading="lazy">
+                            <span class="category-tag" style="background-color: #287233;">LÁPIZ</span>
+                            <img src="img/aa2.png" alt="Retrato a lápiz detallado de 35x25 cm" loading="lazy" width="300" height="400">
+                            <h4>Retrato de Mascota</h4>
                             <p>35x25 cm - Retrato especial de mascota</p>
                         </div>
                     </div>
                     <div class="swiper-slide art-item">
                         <div class="art-content">
-                            <img src="img/aa5.png" alt="Retrato a lápiz detallado de 35x25 cm" loading="lazy">
+                            <span class="category-tag" style="background-color: #287233;">LÁPIZ</span>
+                            <img src="img/aa5.png" alt="Retrato a lápiz detallado de 35x25 cm" loading="lazy" width="300" height="400">
+                            <h4>Retrato en Pareja</h4>
                             <p>35x25 cm - Retrato en pareja</p>
                         </div>
                     </div>
                     <div class="swiper-slide art-item">
                         <div class="art-content">
-                            <img src="img/aa6.png" alt="Retrato a lápiz detallado de 35x25 cm" loading="lazy">
+                            <span class="category-tag" style="background-color: #287233;">LÁPIZ</span>
+                            <img src="img/aa6.png" alt="Retrato a lápiz detallado de 35x25 cm" loading="lazy" width="300" height="400">
+                            <h4>Retrato Individual</h4>
                             <p>35x25 cm - Retrato individual</p>
                         </div>
                     </div>
                     <div class="swiper-slide art-item">
                         <div class="art-content">
-                            <img src="img/aa1.png" alt="Retrato a lápiz detallado de 35x25 cm" loading="lazy">
+                            <span class="category-tag" style="background-color: #287233;">LÁPIZ</span>
+                            <img src="img/aa1.png" alt="Retrato a lápiz detallado de 35x25 cm" loading="lazy" width="300" height="400">
+                            <h4>Retrato Detallado</h4>
                             <p>35x25 cm - Retrato individual, Detalles más precisos</p>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-button-next lapiz-next"></div>
+                <!-- Botones de navegación -->
                 <div class="swiper-button-prev lapiz-prev"></div>
+                <div class="swiper-button-next lapiz-next"></div>
+                <!-- Paginación -->
                 <div class="swiper-pagination lapiz-pagination"></div>
             </div>
             <button class="cta-button">Encargar este estilo</button>
@@ -104,37 +122,49 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide art-item">
                         <div class="art-content">
-                            <img src="img/Acrilico1.png" alt="Cuadro en acrílico colorido de tamaño personalizado" loading="lazy">
+                            <span class="category-tag" style="background-color: #2E4C9E;">ACRÍLICO</span>
+                            <img src="img/Acrilico1.png" alt="Cuadro en acrílico colorido de tamaño personalizado" loading="lazy" width="300" height="400">
+                            <h4>Cuadro Familiar</h4>
                             <p>Acrilico sobre Lienzo 40x60cm, Cuadro familiar</p>
                         </div>
                     </div>
                     <div class="swiper-slide art-item">
                         <div class="art-content">
-                            <img src="img/acrilico2.jpeg" alt="Cuadro en acrílico con fondo personalizado" loading="lazy">
+                            <span class="category-tag" style="background-color: #2E4C9E;">ACRÍLICO</span>
+                            <img src="img/acrilico2.jpeg" alt="Cuadro en acrílico con fondo personalizado" loading="lazy" width="300" height="400">
+                            <h4>Fondo Personalizado</h4>
                             <p>Acrilico sobre lienzo 40x60cm, fondo personalizado</p>
                         </div>
                     </div>
                     <div class="swiper-slide art-item">
                         <div class="art-content">
-                            <img src="img/acrilico3.jpeg" alt="Cuadro en acrílico con fondo personalizado" loading="lazy">
-                            <p>Acrilico sobre lienzo 50x50cm, Retrato de Mascota,Fondos personalizado</p>
+                            <span class="category-tag" style="background-color: #2E4C9E;">ACRÍLICO</span>
+                            <img src="img/acrilico3.jpeg" alt="Cuadro en acrílico con fondo personalizado" loading="lazy" width="300" height="400">
+                            <h4>Retrato de Mascota</h4>
+                            <p>Acrilico sobre lienzo 50x50cm, Retrato de Mascota, Fondos personalizado</p>
                         </div>
                     </div>
                     <div class="swiper-slide art-item">
                         <div class="art-content">
-                            <img src="img/acrilico4.jpeg" alt="Cuadro en acrílico con fondo personalizado" loading="lazy">
+                            <span class="category-tag" style="background-color: #2E4C9E;">ACRÍLICO</span>
+                            <img src="img/acrilico4.jpeg" alt="Cuadro en acrílico con fondo personalizado" loading="lazy" width="300" height="400">
+                            <h4>Retrato Individual</h4>
                             <p>Acrilico sobre lienzo 35x28cm, Retrato individual con fondo personalizado</p>
                         </div>
                     </div>
                     <div class="swiper-slide art-item">
                         <div class="art-content">
-                            <img src="img/acrilico5.jpeg" alt="Cuadro en acrílico con fondo personalizado" loading="lazy">
+                            <span class="category-tag" style="background-color: #2E4C9E;">ACRÍLICO</span>
+                            <img src="img/acrilico5.jpeg" alt="Cuadro en acrílico con fondo personalizado" loading="lazy" width="300" height="400">
+                            <h4>Retrato de Pareja</h4>
                             <p>Acrilico sobre lienzo 70x50cm, Retrato de dos personas</p>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-button-next acrilico-next"></div>
+                <!-- Botones de navegación -->
                 <div class="swiper-button-prev acrilico-prev"></div>
+                <div class="swiper-button-next acrilico-next"></div>
+                <!-- Paginación -->
                 <div class="swiper-pagination acrilico-pagination"></div>
             </div>
             <button class="cta-button">Encargar este estilo</button>
@@ -186,7 +216,7 @@
     <!-- Pie de página -->
     <footer>
         <p>© 2025 Retratos Personalizados. Todos los derechos reservados.</p>
-        <p>Contacto: <a href="mailto:tu-email@example.com">tu-email@example.com</a></p>
+        <p>Contacto: <a href="/cdn-cgi/l/email-protection#1b6f6e367e767a72775b7e637a766b777e35787476"><span class="__cf_email__" data-cfemail="4f3b3a622a222e26230f2a372e223f232a612c2022">[email protected]</span></a></p>
     </footer>
 
     <!-- Botones flotantes -->
@@ -202,7 +232,9 @@
         </a>
     </div>
 
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9259506b0e77dad1',t:'MTc0Mjg1MjI5Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>
