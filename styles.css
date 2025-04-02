@@ -51,7 +51,7 @@ section {
     left: 0;
     width: 100%;
     height: 100px; /* Altura de la imagen inferior, ajusta según necesites */
-    background-image: url('img/arboles.jpeg'); /* Imagen inferior (luna como ejemplo, cámbiala) */
+    background-image: url('img/arboles-.png'); /* Imagen inferior (luna como ejemplo, cámbiala) */
     background-size: cover;
     background-position: center;
     z-index: 1; /* Detrás del contenido */
