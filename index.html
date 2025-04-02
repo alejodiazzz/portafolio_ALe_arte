@@ -9,28 +9,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles.css">
-    <!-- Pre-cargar las primeras imágenes de cada carrusel -->
+    <!-- Pre-carga de imágenes clave -->
     <link rel="preload" href="img/lapiz50x35.webp" as="image">
     <link rel="preload" href="img/Acrilico1.webp" as="image">
+    <link rel="preload" href="https://media-public.canva.com/j28tw/MAFogIj28tw/1/tl.png" as="image">
+    <link rel="preload" href="https://media-public.canva.com/UVjyQ/MAFZ10UVjyQ/1/tl.png" as="image">
 </head>
 <body>
-    <!-- Resto del HTML sin cambios -->
     <!-- Encabezado -->
-    <header class="header-background">
-        <div class="header-content">
-            <h1>
-                <span class="swirls-left"><img src="https://media-public.canva.com/j28tw/MAFogIj28tw/1/tl.png" alt="Remolinos Van Gogh"></span>
-                ALE ARTE
-                <span class="moon-right"><img src="https://media-public.canva.com/UVjyQ/MAFZ10UVjyQ/1/tl.png" alt="Luna Van Gogh"></span>
-            </h1>
-            <p>Transformo tus recuerdos en arte único</p>
-            <button class="cta-button">Encarga tu retrato</button>
-        </div>
-    </header>
+   <header class="header-background">
+    <img src="img/nubes.png" alt="Nubes decorativas" class="header-clouds">
+    <div class="header-content">
+        <h1>
+            <span class="swirls-left"><img src="https://media-public.canva.com/j28tw/MAFogIj28tw/1/tl.png" alt="Remolinos decorativos estilo Van Gogh" loading="lazy"></span>
+            ALE ARTE
+            <span class="moon-right"><img src="https://media-public.canva.com/UVjyQ/MAFZ10UVjyQ/1/tl.png" alt="Luna decorativa estilo Van Gogh" loading="lazy"></span>
+        </h1>
+        <p>Transformo tus recuerdos en arte único</p>
+        <button class="cta-button">Encarga tu retrato</button>
+    </div>
+    <img src="img/arboles-.png" alt="Árboles decorativos" class="header-trees">
+</header>
 
     <!-- Menú de navegación -->
-    <nav>
-        <div class="hamburger">
+    <nav role="navigation">
+        <div class="hamburger" aria-label="Abrir menú de navegación">
             <span></span>
             <span></span>
             <span></span>
@@ -105,10 +108,8 @@
                         </div>
                     </div>
                 </div>
-                <!-- Botones de navegación -->
                 <div class="swiper-button-prev lapiz-prev"></div>
                 <div class="swiper-button-next lapiz-next"></div>
-                <!-- Paginación -->
                 <div class="swiper-pagination lapiz-pagination"></div>
             </div>
             <button class="cta-button">Encargar este estilo</button>
@@ -161,10 +162,8 @@
                         </div>
                     </div>
                 </div>
-                <!-- Botones de navegación -->
                 <div class="swiper-button-prev acrilico-prev"></div>
                 <div class="swiper-button-next acrilico-next"></div>
-                <!-- Paginación -->
                 <div class="swiper-pagination acrilico-pagination"></div>
             </div>
             <button class="cta-button">Encargar este estilo</button>
@@ -183,15 +182,15 @@
         <h2>Proceso</h2>
         <div class="video-gallery">
             <div class="video-item">
-                <video controls>
+                <video controls loading="lazy">
                     <source src="videos/proceso_lapiz.mp4" type="video/mp4">
                     Tu navegador no soporta el elemento de video.
                 </video>
                 <p>Proceso de un retrato a lápiz</p>
             </div>
             <div class="video-item">
-                <video controls>
-                    <source src="vid/proceso.mp4" type="video/mp4">
+                <video controls loading="lazy">
+                    <source src="videos/proceso_acrilico.mp4" type="video/mp4">
                     Tu navegador no soporta el elemento de video.
                 </video>
                 <p>Proceso de un cuadro en acrílico</p>
@@ -202,7 +201,7 @@
     <!-- Sección de Contacto -->
     <section id="contacto">
         <h2>Contacto</h2>
-        <form action="https://formspree.io/f/tu-id-real" method="POST" id="contact-form">
+        <form action="https://formspree.io/f/xabc1234" method="POST" id="contact-form">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
             <label for="email">Correo:</label>
@@ -216,25 +215,26 @@
     <!-- Pie de página -->
     <footer>
         <p>© 2025 Retratos Personalizados. Todos los derechos reservados.</p>
-        <p>Contacto: <a href="/cdn-cgi/l/email-protection#1b6f6e367e767a72775b7e637a766b777e35787476"><span class="__cf_email__" data-cfemail="4f3b3a622a222e26230f2a372e223f232a612c2022">[email protected]</span></a></p>
+        <p>Contacto: <a href="mailto:aleart@gmail.com">ale Ascemail</a></p>
     </footer>
 
     <!-- Botones flotantes -->
     <div class="floating-buttons">
         <a href="https://wa.me/573219038353" target="_blank" class="floating-btn whatsapp" title="Chatea por WhatsApp">
-            <img src="img/whatsapp.png" alt="Ícono de WhatsApp">
+            <img src="img/whatsapp.png" alt="Botón para contactar por WhatsApp">
         </a>
         <a href="https://instagram.com/ale._.arte" target="_blank" class="floating-btn instagram" title="Visita mi Instagram">
-            <img src="img/instagram.png" alt="Ícono de Instagram">
+            <img src="img/instagram.png" alt="Botón para visitar Instagram">
         </a>
         <a href="https://tiktok.com/@alejandrodiazzm" target="_blank" class="floating-btn tiktok" title="Mira mi TikTok">
-            <img src="img/tiktok.png" alt="Ícono de TikTok">
+            <img src="img/tiktok.png" alt="Botón para visitar TikTok">
         </a>
     </div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <!-- Botón "Volver arriba" -->
+    <button class="scroll-top" aria-label="Volver arriba">↑</button>
+
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
-    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9259506b0e77dad1',t:'MTc0Mjg1MjI5Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>

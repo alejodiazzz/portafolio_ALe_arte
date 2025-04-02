@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Inicialización de Swiper para Retratos a Lápiz
     const lapizSwiper = new Swiper(".lapiz-swiper", {
         slidesPerView: 3,
-        spaceBetween: -50, // Negativo para superposición
+        spaceBetween: -50,
         centeredSlides: true,
-        loop: false, // Desactivar loop para evitar duplicados
+        loop: false,
         autoplay: {
             delay: 3000,
             disableOnInteraction: false,
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         slidesPerView: 3,
         spaceBetween: -50,
         centeredSlides: true,
-        loop: false, // Desactivar loop para evitar duplicados
+        loop: false,
         autoplay: {
             delay: 3000,
             disableOnInteraction: false,
@@ -77,21 +77,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Modal para imágenes
     const galleryImages = document.querySelectorAll(".swiper-slide img");
-    console.log("Imágenes encontradas:", galleryImages.length);
-
     const modal = document.createElement("div");
     modal.classList.add("modal");
     document.body.appendChild(modal);
 
     galleryImages.forEach(img => {
         img.addEventListener("click", () => {
-            console.log("Clic en imagen:", img.src);
             modal.innerHTML = `<img src="${img.src}" alt="${img.alt}">`;
             modal.classList.add("active");
         });
     });
 
-    modal.addEventListener("click", () => modal.classList.remove("active"));
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) modal.classList.remove("active"); // Cierra solo al clic fuera de la imagen
+    });
+
     document.addEventListener("keydown", e => {
         if (e.key === "Escape") modal.classList.remove("active");
     });
@@ -124,10 +124,24 @@ document.addEventListener("DOMContentLoaded", () => {
         const nombre = document.getElementById("nombre").value.trim();
         const email = document.getElementById("email").value.trim();
         const mensaje = document.getElementById("mensaje").value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (!nombre || !email || !mensaje) {
             e.preventDefault();
             alert("Por favor, completa todos los campos.");
+        } else if (!emailRegex.test(email)) {
+            e.preventDefault();
+            alert("Por favor, ingresa un correo válido.");
         }
     });
+
+    // Año dinámico en el footer
+    document.querySelector("footer p:first-child").textContent = `© ${new Date().getFullYear()} Retratos Personalizados. Todos los derechos reservados.`;
+
+    // Botón "Volver arriba"
+    const scrollTopBtn = document.querySelector(".scroll-top");
+    window.addEventListener("scroll", () => {
+        scrollTopBtn.classList.toggle("visible", window.scrollY > 200);
+    });
+    scrollTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 });
