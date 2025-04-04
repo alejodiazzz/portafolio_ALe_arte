@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Inicialización de Swiper para Retratos a Lápiz
     const lapizSwiper = new Swiper(".lapiz-swiper", {
         slidesPerView: 3,
-        spaceBetween: -50,
+        spaceBetween: 20, // Cambiado de -50 a 20 para más espacio
         centeredSlides: true,
         loop: false,
         autoplay: {
@@ -32,11 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             768: {
                 slidesPerView: 2,
-                spaceBetween: -30,
+                spaceBetween: 15, // Ajustado de -30 a 15
             },
             1024: {
                 slidesPerView: 3,
-                spaceBetween: -50,
+                spaceBetween: 20, // Ajustado de -50 a 20
             },
         },
     });
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Inicialización de Swiper para Cuadros en Acrílico
     const acrilicoSwiper = new Swiper(".acrilico-swiper", {
         slidesPerView: 3,
-        spaceBetween: -50,
+        spaceBetween: 20, // Cambiado de -50 a 20 para más espacio
         centeredSlides: true,
         loop: false,
         autoplay: {
@@ -66,11 +66,11 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             768: {
                 slidesPerView: 2,
-                spaceBetween: -30,
+                spaceBetween: 15, // Ajustado de -30 a 15
             },
             1024: {
                 slidesPerView: 3,
-                spaceBetween: -50,
+                spaceBetween: 20, // Ajustado de -50 a 20
             },
         },
     });
