@@ -7,6 +7,7 @@ body {
     color: #000000;
     line-height: 1.6;
     overflow-x: hidden;
+    text-align: center; /* Centrar todo el texto */
 }
 
 /* Secciones */
@@ -14,6 +15,7 @@ section {
     padding: 40px 20px;
     position: relative;
     background: #FFFFFF;
+    text-align: center; /* Centrar texto en secciones */
 }
 
 /* Encabezado */
@@ -22,70 +24,51 @@ section {
     background: #FFFFFF;
     padding: 60px 20px;
     text-align: center;
-    min-height: 500px; /* Aumentado para dar más espacio vertical */
+    min-height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: visible; /* Permitir que las imágenes sobresalgan */
+    overflow: visible;
 }
 
 /* Imagen de nubes */
 .header-clouds {
     position: absolute;
-    top: -100px; /* Más desplazamiento hacia arriba para separar */
+    top: -100px;
     left: 0;
     width: 100%;
-    height: auto; /* Mantiene la proporción original */
-    z-index: 1; /* Detrás del contenido */
-    pointer-events: none; /* Evita interferir con clics */
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
 }
 
 /* Imagen de árboles */
 .header-trees {
     position: absolute;
-    bottom: -100px; /* Más desplazamiento hacia abajo para separar */
+    bottom: -100px;
     left: 0;
     width: 100%;
-    height: auto; /* Mantiene la proporción original */
-    z-index: 1; /* Detrás del contenido */
-    pointer-events: none; /* Evita interferir con clics */
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
 }
 
 .header-content {
     position: relative;
-    z-index: 2; /* Encima de las imágenes */
+    z-index: 2;
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
-    background: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para legibilidad */
-    padding: 20px; /* Espacio interno para separar del borde */
-    border-radius: 10px; /* Bordes suaves */
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center; /* Centrar texto en el header */
 }
 
-.header-content h1 {
-    font-family: 'Amatic SC', cursive !important;
-    font-size: clamp(2.5rem, 5vw, 5rem);
-    margin-bottom: 15px;
-    font-weight: 700;
-    color: #000000;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.swirls-left img {
-    width: 80px;
+.logo {
+    max-width: 200px; /* Ajusta según tu logotipo */
     height: auto;
-    margin-right: 15px;
-}
-
-.moon-right img {
-    width: 80px;
-    height: auto;
-    margin-left: 15px;
+    margin: 0 auto 15px;
+    display: block;
 }
 
 .header-content p {
@@ -93,6 +76,7 @@ section {
     margin-bottom: 25px;
     font-weight: 300;
     color: #333333;
+    text-align: center;
 }
 
 /* Botón de encargo */
@@ -127,6 +111,7 @@ nav {
     padding: 10px;
     z-index: 1100;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centrar texto en navegación */
 }
 
 .hamburger {
@@ -188,31 +173,34 @@ nav {
     font-size: 2.5rem;
     color: #000000;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .category h3 {
     color: #287233;
     font-size: 1.8rem;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .category p {
     font-size: 1.2rem;
     color: #333333;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 /* Carrusel */
 .swiper-container {
     width: 100%;
-    max-width: 1000px; /* Aumentado para dar más espacio */
+    max-width: 1000px;
     margin: 20px auto;
     position: relative;
     overflow: hidden;
-    background: url('img/kraft-paper.jpeg') no-repeat center center; /* Imagen de fondo de papel kraft */
-    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
-    background-position: center; /* Centra la imagen */
-    padding: 30px; /* Más padding para que el marco y la sombra se vean mejor */
+    background: url('img/kraft-paper.jpeg') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
     border-radius: 15px;
 }
 
@@ -226,7 +214,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 280px; /* Reducido para que las imágenes no se vean tan grandes */
+    width: 280px;
     transition: transform 0.3s ease;
 }
 
@@ -241,18 +229,18 @@ nav {
 
 .art-content {
     position: relative;
-    border-radius: 10px; /* Reducimos el border-radius para un marco más definido */
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada para profundidad */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
     width: 100%;
-    height: 380px; /* Reducido para que las imágenes no sean tan altas */
+    height: 380px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding: 15px;
-    background: #F5E8C7; /* Color de fondo del marco, similar a madera clara */
-    border: 8px solid #D4B483; /* Marco de madera clara */
+    background: #F5E8C7;
+    border: 8px solid #D4B483;
 }
 
 .art-content::before {
@@ -271,6 +259,7 @@ nav {
 .category-tag {
     position: relative;
     z-index: 2;
+    text-align: center; /* Centrar texto en el contenido del arte */
 }
 
 .art-content:hover {
@@ -284,7 +273,7 @@ nav {
     position: absolute;
     top: 0;
     left: 0;
-    border-radius: 5px; /* Ajustamos el border-radius de la imagen dentro del marco */
+    border-radius: 5px;
 }
 
 .category-tag {
@@ -401,14 +390,24 @@ nav {
 
 .video-item {
     text-align: center;
-    max-width: 400px;
+    max-width: 300px;
+    width: 100%;
 }
 
 .video-item video {
     width: 100%;
+    height: 533px; /* Proporción 9:16 (300 * 16 / 9 ≈ 533) */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: 1px solid #E0E0E0;
+    object-fit: cover;
+}
+
+.video-item p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333333;
+    text-align: center;
 }
 
 /* Formulario */
@@ -418,6 +417,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    text-align: center; /* Centrar texto en formulario */
 }
 
 label {
@@ -465,6 +465,13 @@ footer {
 
 footer a {
     color: #FFD700;
+}
+
+.footer-image {
+    max-width: 80px; /* Ajusta según tu "imagentipo" */
+    height: auto;
+    margin: 10px auto;
+    display: block;
 }
 
 /* Botones flotantes */
@@ -587,47 +594,38 @@ footer a {
     .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
     .header-background {
         padding: 40px 10px;
-        min-height: 400px; /* Reducido en móviles */
+        min-height: 400px;
     }
     .header-clouds {
-        top: -50px; /* Menos desplazamiento en móviles */
+        top: -50px;
     }
     .header-trees {
-        bottom: -50px; /* Menos desplazamiento en móviles */
+        bottom: -50px;
     }
-    .header-content h1 {
-        font-size: 2.5rem;
-        flex-direction: column;
-        gap: 10px;
-    }
-    .swirls-left img {
-        width: 40px;
-        margin-right: 0;
-        margin-bottom: 5px;
-    }
-    .moon-right img {
-        width: 40px;
-        margin-left: 0;
-        margin-top: 5px;
+    .logo {
+        max-width: 150px; /* Tamaño más pequeño en móviles */
     }
     .header-content p { font-size: 1rem; }
     .floating-buttons { bottom: 10px; right: 10px; gap: 10px; }
     .floating-btn { width: 40px; height: 40px; }
-    .video-item { max-width: 100%; }
+    .video-item video {
+        max-width: 250px;
+        height: 444px; /* Proporción 9:16 para 250px */
+    }
     .swiper-container {
         max-width: 100%;
         padding: 10px;
-        background: url('img/kraft-paper.jpeg') no-repeat center center; /* Mantener la imagen de fondo en móviles */
-        background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
-        background-position: center; /* Centra la imagen */
+        background: url('img/kraft-paper.jpeg') no-repeat center center;
+        background-size: cover;
+        background-position: center;
     }
     .swiper-slide {
         width: 250px;
     }
     .art-content {
         height: 350px;
-        border: 6px solid #D4B483; /* Marco ligeramente más delgado en móviles */
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* Sombra más suave en móviles */
+        border: 6px solid #D4B483;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     }
     .art-content h4 {
         font-size: 1rem;
@@ -649,15 +647,13 @@ footer a {
 @media (max-width: 1024px) and (min-width: 769px) {
     .floating-buttons { right: 15px; bottom: 15px; gap: 12px; }
     .floating-btn { width: 45px; height: 45px; }
-    .header-content h1 { font-size: 4rem; }
-    .swirls-left img { width: 60px; margin-right: 12px; }
-    .moon-right img { width: 60px; margin-left: 12px; }
+    .logo { max-width: 180px; }
     .header-content p { font-size: 1.2rem; }
     .swiper-slide {
-        width: 260px; /* Reducido para tabletas */
+        width: 260px;
     }
     .art-content {
-        height: 360px; /* Reducido para tabletas */
-        border: 7px solid #D4B483; /* Marco intermedio para tabletas */
+        height: 360px;
+        border: 7px solid #D4B483;
     }
 }
